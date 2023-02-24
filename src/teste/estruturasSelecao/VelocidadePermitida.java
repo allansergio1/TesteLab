@@ -51,7 +51,8 @@ public class VelocidadePermitida {
 		return str;
 	}
 }
-/*int op = 0;
+/*
+int op = 0;
 Scanner sc = new Scanner(System.in);
 VelocidadePermitida veiculo = new VelocidadePermitida();
 
@@ -71,4 +72,5 @@ do {
 	
 } while (op == 1);
 
-sc.close();*/
+sc.close();
+*/
