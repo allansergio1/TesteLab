@@ -11,9 +11,10 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		PesquisandoValor pesquisa = new PesquisandoValor();
+		MaisNovosPrimeiro personas = new MaisNovosPrimeiro();
 		
-		pesquisa.consulta();
+		personas.adicionarPessoas();
+		personas.listarIdadeDecrescente();
 
 		/*
 		 * NumerosSequenciaV1 n = new NumerosSequenciaV1();
