@@ -1,26 +1,21 @@
 package teste.aritmeticaSimples;
 
+import java.util.Scanner;
+
 public class ExponencialLog {
 
-	private double x;
-	private double y;
+	Scanner sc = new Scanner(System.in);
 
-	public double getX() {
-		return x;
-	}
-
-	public void setX(double x) {
-		this.x = x;
-	}
-
-	public double getY() {
-		return y;
-	}
-
-	public void setY(double y) {
-		this.y = y;
+	public void calcular() {
 		
+		System.out.print("Digite o valor de X: ");
+		double x = Double.parseDouble(sc.nextLine());
+
+		System.out.print("Digite o valor de Y: ");
+		double y = Double.parseDouble(sc.nextLine());
+
+		double resultado = Math.exp(y * Math.log(x));
+
+		System.out.println("O resultado de X elevado a Y eh: " + resultado);
 	}
-	
-	
 }

@@ -11,10 +11,9 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		MaisNovosPrimeiro personas = new MaisNovosPrimeiro();
+		ExponencialLog pot = new ExponencialLog();
 		
-		personas.adicionarPessoas();
-		personas.listarIdadeDecrescente();
+		pot.calcular();
 
 		/*
 		 * NumerosSequenciaV1 n = new NumerosSequenciaV1();

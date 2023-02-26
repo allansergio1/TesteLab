@@ -8,6 +8,7 @@ public class CompraTroco {
 	private double v4;
 	private double v5;
 	private double pagamento;
+	
 
 	public double getV1() {
 		return v1;
@@ -62,6 +63,7 @@ public class CompraTroco {
 		double troco = pagamento - total;
 		return "O troco da compra eh de: R$" + Math.round(troco * 100.0) / 100.0;
 	}
+	
 }
 /*
 int op = 0;
