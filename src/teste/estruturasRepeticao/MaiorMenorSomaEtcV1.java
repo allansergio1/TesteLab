@@ -10,33 +10,53 @@ public class MaiorMenorSomaEtcV1 {
 
 	public void valores() {
 		double soma = 0;
-		double maior = 0;
-		double menor = 0;
+		double maior = Double.NEGATIVE_INFINITY;
+		double menor = Double.POSITIVE_INFINITY;
+		int positivos = 0;
+		int negativos = 0;
+
 		do {
 			System.out.println("Quantos valores serao digitados?");
-			num = sc.nextDouble();
-			if (n < 0 || num > 20) {
+			n = sc.nextDouble();
+			if (n < 0 || n > 20) {
 				System.out.println("Erro: numero menor que 0 ou maior que 20");
 			}
-		} while (num < 0 || num > 20);
-		for (int i = 0; i < num; i++) {
-			do {
-				System.out.format("Valor " + (i + 1) + ": ");
-				n = sc.nextDouble();
-				if (n < 0) {
-					System.out.println("Erro");
-				} else if (n > maior) {
-					maior = n;
-				} else if (menor < n) {
-					menor = n;
-				}
-			} while (n < 0);
-			soma += n;
+		} while (n < 0 || n > 20);
+
+		for (int i = 0; i < n; i++) {
+			System.out.format("Valor " + (i + 1) + ": ");
+			num = sc.nextDouble();
+			if (num > maior) {
+				maior = num;
+			}
+			if (num < menor) {
+				menor = num;
+			}
+			soma += num;
+		
+			if (num > 0) {
+				positivos++;
+			} else if (num < 0) {
+				negativos++;
+			}
 		}
-		double media = soma / num;
+
+		double media = soma / n;
+		double pctPositivos = (double) positivos / n * 100;
+		double pctNegativos = (double) negativos / n * 100;
+
+
 		System.out.println("O maior valor eh: " + maior);
 		System.out.println("O menor valor eh: " + menor);
 		System.out.println("A soma dos valores eh de: " + soma);
 		System.out.println("A media aritmetica dos valores eh de: " + media);
+		System.out.printf("A porcentagem de valores positivos eh de: %.2f%%%n", pctPositivos);
+		System.out.printf("A porcentagem de valores negativos eh de: %.2f%%%n", pctNegativos);
+		sc.close();
 	}
 }
+/*
+MaiorMenorSomaEtcV1 conjunto = new MaiorMenorSomaEtcV1();
+		
+		conjunto.valores();
+*/
