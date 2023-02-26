@@ -11,19 +11,10 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		ExponencialLog pot = new ExponencialLog();
+		NumerosSequenciaV3 num = new NumerosSequenciaV3();
 		
-		pot.calcular();
+		num.calcularTermo();
 
-		/*
-		 * NumerosSequenciaV1 n = new NumerosSequenciaV1();
-		 * 
-		 * System.out.println(n.calcularTermo(2));
-		 * 
-		 * Bergamaschi berg = new Bergamaschi(); Fibonacci fibo = new Fibonacci();
-		 * 
-		 * fibo.sequencia(); System.out.println(""); berg.sequencia();
-		 */
 	}
 
 }

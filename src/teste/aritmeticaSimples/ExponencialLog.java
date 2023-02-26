@@ -16,6 +16,6 @@ public class ExponencialLog {
 
 		double resultado = Math.exp(y * Math.log(x));
 
-		System.out.println("O resultado de X elevado a Y eh: " + resultado);
+		System.out.println("O resultado de X elevado a Y eh: " + Math.round(resultado * 100) / 100);
 	}
 }
