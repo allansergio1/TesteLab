@@ -1,10 +1,27 @@
 package teste.pequenosDesafios.jogoDaVelha;
 
-public class Posicao {
+class Posicao extends JogoDaVelha{
 	
-	private int pos;
+	private char simbolo;
 
-	public int getPos() {
-		return pos;
+	public Posicao(char simbolo) {
+		this.simbolo = simbolo;
+	}
+
+	public char getSimbolo() {
+		return simbolo;
+	}
+
+	public void marcar(char simbolo) {
+		this.simbolo = simbolo;
+	}
+
+	public boolean estaVazio() {
+		return simbolo == VAZIO;
+	}
+
+	@Override
+	public String toString() {
+		return String.valueOf(simbolo);
 	}
 }

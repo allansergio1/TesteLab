@@ -31,7 +31,11 @@ public class TesteTriangulo {
 	}
 	
 	public String existeTriangulo(){
-		if (lado1 < (lado2 + lado3) && lado2 < (lado1 + lado3) && lado3 < (lado1 + lado2)) {
+		boolean lado1Menor = lado1 < (lado2 + lado3);
+		boolean lado2Menor = lado2 < (lado1 + lado3);
+		boolean lado3Menor = lado3 < (lado1 + lado2);
+		
+		if (lado1Menor && lado2Menor && lado3Menor) {
 			if(lado1 == lado2 && lado2 == lado3) {
 				return "Eh possivel formar um triangulo equilatero";
 			} else if(lado1 != lado2 && lado2 != lado3 && lado3 != lado1) {

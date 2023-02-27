@@ -13,10 +13,10 @@ public class NumerosSequenciaV2 {
 		do {
 			System.out.println("Digite o numero de valores da sequencia a serem somados:");
 			n = sc.nextInt();
-			if (n < 0 || n > 50) {
+			if (n < 0 || n >= 50) {
 				System.out.println("ERRO - VALOR MENOR QUE 0 OU MAIOR QUE 50");
 			}
-		} while (n < 0 || n > 50);
+		} while (n < 0 || n >= 50);
 
 		for (int i = 1; i <= n; i++) {
 			seq = (double) i / (i + 1);

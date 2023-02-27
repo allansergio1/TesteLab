@@ -36,7 +36,5 @@ public class Fatorial {
 	}
 }
 /*
-Fatorial fat = new Fatorial();
-		
-		fat.calcular();
+ 
 */

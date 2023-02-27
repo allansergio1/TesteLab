@@ -9,17 +9,14 @@ import teste.estruturasSelecao.*;
 import teste.pequenosDesafios.BuscaInternet;
 import teste.pequenosDesafios.PontuacaoBasquete;
 import teste.pequenosDesafios.Tomadas;
-import teste.pequenosDesafios.jogoDaVelha.JogoDaVelha;
+import teste.pequenosDesafios.jogoDaVelha.*;
 
 public class Main {
 
 	public static void main(String[] args) {
 
-		JogoDaVelha j = new JogoDaVelha();
-		 
-		 //j.adicionarJogador();
-		 //j.jogar();
-		 j.vizualizacaoTab();
-	}
+		Fatorial fat = new Fatorial();
 
+		fat.calcular();
+	}
 }

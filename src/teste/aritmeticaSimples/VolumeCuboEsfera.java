@@ -23,12 +23,20 @@ public class VolumeCuboEsfera {
 
 	public String calcularVolumeEsferaCubo() {
 		double volume;
-		if (2 * raio == aresta) {
-			volume = Math.pow(aresta, 3) - (4 * Math.PI * Math.pow(raio, 3) / 3);
+		if (2 * raio <= aresta) {
+			volume = calcularVolumeCubo(aresta) - calcularVolumeEsfera(raio);
 			return "O volume livre eh de: " + Math.round(volume * 100.0) / 100.0 + " cm3\n";
 		} else {
 			return "A esfera nao esta inscrita no cubo.\n";
 		}
+	}
+	
+	private double calcularVolumeCubo(double aresta) {
+		return Math.pow(aresta, 3);
+	}
+	
+	private double calcularVolumeEsfera(double raio) {
+		return (4 * Math.PI * Math.pow(raio, 3) / 3);
 	}
 }
 /*

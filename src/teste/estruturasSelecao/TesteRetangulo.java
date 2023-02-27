@@ -30,55 +30,45 @@ public class TesteRetangulo {
 		this.lado3 = lado3;
 	}
 
-	private double hipotenusa() {
-		if (lado1 > lado2 && lado1 > lado3) {
-			return lado1;
-		} else if (lado2 > lado1 && lado2 > lado3) {
-			return lado2;
+	private boolean triangulo() {
+		boolean lado1Menor = lado1 < (lado2 + lado3);
+		boolean lado2Menor = lado2 < (lado1 + lado3);
+		boolean lado3Menor = lado3 < (lado1 + lado2);
+
+		if (lado1Menor && lado2Menor && lado3Menor) {
+			return true;
 		} else {
-			return lado3;
+			return false;
 		}
 	}
 
-	/*public String existeTriangulo() {
-		if (lado1 < (lado2 + lado3) && lado2 < (lado1 + lado3) && lado3 < (lado1 + lado2)) {
-			if (lado1 == hipotenusa() && (Math.pow(hipotenusa(), 2)) == (Math.pow(lado2, 2)) + (Math.pow(lado3, 2))) {
+	public String existeTrianguloRetangulo() {
+		if (triangulo()) {
+			if (trianguloRetangulo(lado1, lado2, lado3) || trianguloRetangulo(lado2, lado3, lado1)
+					|| trianguloRetangulo(lado3, lado1, lado2)) {
 				return "Eh possivel formar um triangulo retangulo com esses valores";
-			} else if (lado2 == hipotenusa()
-					&& (Math.pow(hipotenusa(), 2)) == (Math.pow(lado3, 2)) + (Math.pow(lado1, 2))) {
-				return "Eh possivel formar um triangulo retangulo com esses valores";
-			} else if (lado3 == hipotenusa()
-					&& (Math.pow(hipotenusa(), 2)) == (Math.pow(lado1, 2)) + (Math.pow(lado2, 2))) {
-				return "Eh possivel formar um triangulo retangulo com esses valores";
+			} else {
+				return "Nao e possivel formar um triangulo retangulo";
 			}
 		} else {
-			return "Nao e possivel formar um triangulo retangulo";
-		}
-	}*/
-
-	public String existeTriangulo() {
-		if (lado1 == hipotenusa() && (Math.pow(hipotenusa(), 2)) == (Math.pow(lado2, 2)) + (Math.pow(lado3, 2))) {
-			return "Eh possivel formar um triangulo retangulo com esses valores";
-		} else if (lado2 == hipotenusa()
-				&& (Math.pow(hipotenusa(), 2)) == (Math.pow(lado3, 2)) + (Math.pow(lado1, 2))) {
-			return "Eh possivel formar um triangulo retangulo com esses valores";
-		} else if (lado3 == hipotenusa()
-				&& (Math.pow(hipotenusa(), 2)) == (Math.pow(lado1, 2)) + (Math.pow(lado2, 2))) {
-			return "Eh possivel formar um triangulo retangulo com esses valores";
-		} else {
-			return "Nao e possivel formar um triangulo retangulo";
+			return "Nao e possivel formar nem um triangulo";
 		}
 	}
-} 
-/*Scanner sc = new Scanner(System.in);
-TesteRetangulo triangulo = new TesteRetangulo();
 
-System.out.print("Digite os lados do triangulo: ");
-triangulo.setLado1(Double.parseDouble(sc.nextLine()));
-triangulo.setLado2(Double.parseDouble(sc.nextLine()));
-triangulo.setLado3(Double.parseDouble(sc.nextLine()));
-
-System.out.println(triangulo.existeTriangulo());
-
-sc.close();
-*/
+	public boolean trianguloRetangulo(double hipotenusa, double cateto1, double cateto2) {
+		return (Math.pow(hipotenusa, 2)) == (Math.pow(cateto1, 2)) + (Math.pow(cateto2, 2));
+	}
+}
+/*
+ * Scanner sc = new Scanner(System.in); TesteRetangulo triangulo = new
+ * TesteRetangulo();
+ * 
+ * System.out.print("Digite os lados do triangulo: ");
+ * triangulo.setLado1(Double.parseDouble(sc.nextLine()));
+ * triangulo.setLado2(Double.parseDouble(sc.nextLine()));
+ * triangulo.setLado3(Double.parseDouble(sc.nextLine()));
+ * 
+ * System.out.println(triangulo.existeTriangulo());
+ * 
+ * sc.close();
+ */
