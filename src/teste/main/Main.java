@@ -6,15 +6,20 @@ import teste.aritmeticaSimples.*;
 import teste.estruturasDados.*;
 import teste.estruturasRepeticao.*;
 import teste.estruturasSelecao.*;
+import teste.pequenosDesafios.BuscaInternet;
+import teste.pequenosDesafios.PontuacaoBasquete;
+import teste.pequenosDesafios.Tomadas;
+import teste.pequenosDesafios.jogoDaVelha.JogoDaVelha;
 
 public class Main {
 
 	public static void main(String[] args) {
 
-		NumerosSequenciaV3 num = new NumerosSequenciaV3();
-		
-		num.calcularTermo();
-
+		JogoDaVelha j = new JogoDaVelha();
+		 
+		 //j.adicionarJogador();
+		 //j.jogar();
+		 j.vizualizacaoTab();
 	}
 
 }

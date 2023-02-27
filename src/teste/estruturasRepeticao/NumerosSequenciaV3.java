@@ -21,7 +21,7 @@ public class NumerosSequenciaV3 {
 		for (int i = 1; i <= n; i++) {
 			seq = (double) (Math.pow(i, 2) + 1) / (Math.pow(i, 3));
 			//System.out.print(seq + " ");
-			System.out.print((int) (Math.pow(i, 2) + 1) + "/" + (int) (Math.pow(i, 3)) + "  ");
+			//System.out.print((int) (Math.pow(i, 2) + 1) + "/" + (int) (Math.pow(i, 3)) + "  ");
 			soma = soma + seq;
 		}
 
